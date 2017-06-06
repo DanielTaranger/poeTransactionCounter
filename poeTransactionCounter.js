@@ -40,7 +40,7 @@ for(var i = 0; i < elements.length; ++i){
         out = 130;
     }else if(myString.includes("Lunaris")){
         out = 260;
-    }else if(myString.includes("Highgate")){
+    }else if(myString.indexOf("Highgate") == 0){
         out = 1100;
     }else if(myString.includes("Apprentice")){
         out = 50;
