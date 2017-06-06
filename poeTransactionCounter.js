@@ -104,11 +104,12 @@ for(var i = 0; i < elements.length; ++i){
     }else{
           errormessage  = errormessage + "\n" + myString;
     }
+    console.log(myString);
     console.log(total + "+"+ out + "=" + (total = total + parseInt(out)));
 }
 
 if(errormessage == ""){
     alert("You have spent " + "$" + total + " on microtransactions");
 }else{
-    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not counted: "  + errormessage);
+    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: "  + errormessage);
 }
