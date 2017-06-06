@@ -86,7 +86,7 @@ for(var i = 0; i < elements.length; ++i){
         out = 20;
     }else{
     }
-        
+       
     console.log(myString);
     console.log(total + "+"+ out + "=" + (total = total + parseInt(out)));  
 }
