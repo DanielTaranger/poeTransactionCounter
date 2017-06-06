@@ -32,9 +32,9 @@ for(var i = 0; i < elements.length; ++i){
         out = 220;
     }else if(myString.includes("Ascendant")){
         out = 440;
-    }else if(myString.includes("Awakening")){
-        out = 30;
     }else if(myString.includes("Axiom")){
+        out = 30;
+    }else if(myString.includes("Awakening")){
         out = 60;
     }else if(myString.includes("Vaal")){
         out = 130;
@@ -98,6 +98,8 @@ for(var i = 0; i < elements.length; ++i){
         out = 4;
     }else if(myString.includes("Brazil")){
         out = 40;
+    }else if(myString.includes("Early")){
+        out = 10;
     }
        
     console.log(myString);
