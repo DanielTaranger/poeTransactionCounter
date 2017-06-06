@@ -88,8 +88,6 @@ for(var i = 0; i < elements.length; ++i){
         out = 20;
     }else if(myString.includes("516 Point")){
         out = 50;
-    }else if(myString.includes("Supporter")){
-        out = 10;
     }else{
     }
        
