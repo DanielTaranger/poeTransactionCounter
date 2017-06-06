@@ -90,6 +90,8 @@ for(var i = 0; i < elements.length; ++i){
         out = 50;
     }else if(myString.indexOf("Supporter") == 0){
         out = 15;
+    }else if(myString.includes("Koala")){
+        out = 14;
     }else{
     }
        
