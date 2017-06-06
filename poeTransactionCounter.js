@@ -110,5 +110,5 @@ for(var i = 0; i < elements.length; ++i){
 if(errormessage == ""){
     alert("You have spent " + "$" + total + " on microtransactions");
 }else{
-    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: "  + errormessage);
+    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not counted: "  + errormessage);
 }
