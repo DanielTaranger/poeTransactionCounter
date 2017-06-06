@@ -35,14 +35,14 @@ for(var i = 0; i < elements.length; ++i){
         out = 440;
     }else if(myString.includes("Axiom")){
         out = 60;
-    }else if(myString.includes("Awakening")){
-        out = 30;
     }else if(myString.includes("Vaal")){
         out = 130;
     }else if(myString.includes("Lunaris")){
         out = 260;
     }else if(myString.indexOf("Highgate") == 0){
         out = 1100;
+    }else if(myString.includes("Awakening")){
+        out = 30;
     }else if(myString.includes("Apprentice")){
         out = 50;
     }else if(myString.includes("Journeyman")){
