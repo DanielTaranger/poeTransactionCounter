@@ -92,6 +92,8 @@ for(var i = 0; i < elements.length; ++i){
         out = 15;
     }else if(myString.includes("Koala")){
         out = 14;
+    }else if(myString.includes("Angelic Mask")){
+        out = 5;
     }else{
     }
        
