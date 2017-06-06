@@ -1,5 +1,6 @@
 var elements = document.getElementsByClassName("packageName el FontinBold");
 var total = 0;
+var errormessage = "";
 
 for(var i = 0; i < elements.length; ++i){
     myString = elements[i].innerHTML;
@@ -100,10 +101,14 @@ for(var i = 0; i < elements.length; ++i){
         out = 40;
     }else if(myString.includes("Early")){
         out = 10;
+    }else{
+          errormessage  = errormessage + "\n" + myString;
     }
-       
-    console.log(myString);
-    console.log(total + "+"+ out + "=" + (total = total + parseInt(out)));  
+    console.log(total + "+"+ out + "=" + (total = total + parseInt(out)));
 }
 
-alert("You have spent " + "$" + total + " on microtransactions");
+if(errormessage == ""){
+    alert("You have spent " + "$" + total + " on microtransactions");
+}else{
+    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: "  + errormessage);
+}
