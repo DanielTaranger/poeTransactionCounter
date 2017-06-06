@@ -6,7 +6,7 @@ for(var i = 0; i < elements.length; ++i){
     myString = myString.trim();
         
         var out = 0;
-    if(myString.includes("Legacy")){
+    if(myString.includes("Classic")){
         out = 30;
     }else if(myString.includes("Legacy")){
         out = 60;
