@@ -89,6 +89,8 @@ for(var i = 0; i < elements.length; ++i){
         out = 20;
     }else if(myString.includes("516 Point")){
         out = 50;
+    }else if(myString.includes("1065 Point")){
+        out = 100;
     }else if(myString.indexOf("Supporter") == 0){
         out = 15;
     }else if(myString.includes("Koala")){
