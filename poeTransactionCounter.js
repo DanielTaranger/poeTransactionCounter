@@ -94,6 +94,8 @@ for(var i = 0; i < elements.length; ++i){
         out = 14;
     }else if(myString.includes("Angelic Mask")){
         out = 5;
+    }else if(myString.includes("Comic")){
+        out = 4;
     }else{
     }
        
