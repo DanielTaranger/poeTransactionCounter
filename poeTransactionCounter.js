@@ -46,6 +46,8 @@ for(var i = 0; i < elements.length; ++i){
         out = 50;
     }else if(myString.includes("Journeyman")){
         out = 100;
+    }else if(myString.includes("Master")){
+        out = 200;
     }else if(myString.includes("Grandmaster")){
         out = 500;
     }else if(myString.includes("Survivor")){
