@@ -98,7 +98,6 @@ for(var i = 0; i < elements.length; ++i){
         out = 4;
     }else if(myString.includes("Brazil")){
         out = 40;
-    }else{
     }
        
     console.log(myString);
