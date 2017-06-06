@@ -33,9 +33,9 @@ for(var i = 0; i < elements.length; ++i){
     }else if(myString.includes("Ascendant")){
         out = 440;
     }else if(myString.includes("Axiom")){
-        out = 30;
-    }else if(myString.includes("Awakening")){
         out = 60;
+    }else if(myString.includes("Awakening")){
+        out = 30;
     }else if(myString.includes("Vaal")){
         out = 130;
     }else if(myString.includes("Lunaris")){
