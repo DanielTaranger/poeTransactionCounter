@@ -9,6 +9,18 @@ for(var i = 0; i < elements.length; ++i){
         var out = 0;
     if(myString.includes("Classic")){
         out = 30;
+    }else if(myString.includes("Oriath")){
+        out = 30;
+    }else if(myString.includes("Outlaw")){
+        out = 60;
+    }else if(myString.includes("Legion")){
+        out = 100;
+    }else if(myString.includes("Eclipse")){
+        out = 160;
+    }else if(myString.includes("Beast")){
+        out = 240;
+    }else if(myString.includes("Kitava")){
+        out = 480;
     }else if(myString.includes("Legacy")){
         out = 60;
     }else if(myString.includes("Breachspawn")){
