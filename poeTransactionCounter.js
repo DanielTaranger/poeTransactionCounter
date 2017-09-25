@@ -5,9 +5,13 @@ var errormessage = "";
 for(var i = 0; i < elements.length; ++i){
     myString = elements[i].innerHTML;
     myString = myString.trim();
-        
-        var out = 0;
-    if(myString.includes("Classic")){
+
+    var out = 0;
+    if(myString.includes("Portent")){
+        out = 30;
+    }else if(myString.includes("Harbinger")){
+        out = 60;
+    }else if(myString.includes("Classic")){
         out = 30;
     }else if(myString.includes("Oriath")){
         out = 30;
