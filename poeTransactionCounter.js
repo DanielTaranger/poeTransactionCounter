@@ -7,7 +7,149 @@ for(var i = 0; i < elements.length; ++i){
     myString = myString.trim();
 
     var out = 0;
-    if(myString.includes("Portent")){
+    if(myString.includes("Deadly Renegade")){
+        out = 60;
+    }else if(myString.includes("Renegade")){
+        out = 30;
+    }else if(myString.includes("Elite Faithsworn")){
+        out = 60;
+    }else if(myString.includes("Faithsworn")){
+        out = 30;
+    }else if(myString.includes("Delve Core")){
+        out = 60;
+    }else if(myString.includes("Breach Core")){
+        out = 100;
+    }else if(myString.includes("Abyss Core")){
+        out = 160;
+    }else if(myString.includes("Harvest Core")){
+        out = 240;
+    }else if(myString.includes("Atlas Core")){
+        out = 480;
+    }else if(myString.includes("Master Spellblade")){
+        out = 60;
+    }else if(myString.includes("Spellblade")){
+        out = 30;
+    }else if(myString.includes("Imperial Eagle")){
+        out = 60;
+    }else if(myString.includes("Eagle")){
+        out = 30;
+    }else if(myString.includes("Insatiable Malice")){
+        out = 60;
+    }else if(myString.includes("Malice")){
+        out = 30;
+    }else if(myString.includes("Divine Benevolence")){
+        out = 60;
+    }else if(myString.includes("Benevolence")){
+        out = 30;
+    }else if(myString.includes("Elite Fateweaver")){
+        out = 60;
+    }else if(myString.includes("Fateweaver")){
+        out = 30;
+    }else if(myString.includes("Elder Darkseer")){
+        out = 60;
+    }else if(myString.includes("Darkseer")){
+        out = 30;
+    }else if(myString.includes("Basilisk")){
+        out = 60;
+    }else if(myString.includes("Crusader")){
+        out = 100;
+    }else if(myString.includes("Eyrie")){
+        out = 160;
+    }else if(myString.includes("Judicator")){
+        out = 240;
+    }else if(myString.includes("Orion")){
+        out = 480;
+    }else if(myString.includes("Grand Sanctum")){
+        out = 60;
+    }else if(myString.includes("Sanctum")){
+        out = 30;
+    }else if(myString.includes("Eternal Damnation")){
+        out = 60;
+    }else if(myString.includes("Damnation")){
+        out = 30;
+    }else if(myString.includes("Sentinel Overlord")){
+        out = 60;
+    }else if(myString.includes("Sentinel")){
+        out = 30;
+    }else if(myString.includes("Bane Lich")){
+        out = 60;
+    }else if(myString.includes("Lich")){
+        out = 30;
+    }else if(myString.includes("Cult of Darkness")){
+        out = 30;
+    }else if(myString.includes("Cult of Apocalypse")){
+        out = 60;
+    }else if(myString.includes("Blood Knight")){
+        out = 30;
+    }else if(myString.includes("Blood Guardian")){
+        out = 60;
+    }else if(myString.includes("Sunstone")){
+        out = 30;
+    }else if(myString.includes("Sunspire")){
+        out = 60;
+    }else if(myString.includes("Doomcrow")){
+        out = 30;
+    }else if(myString.includes("Doomguard")){
+        out = 60;
+    }else if(myString.includes("Pitfighter")){
+        out = 60;
+    }else if(myString.includes("Assassin")){
+        out = 100;
+    }else if(myString.includes("Vanguard")){
+        out = 160;
+    }else if(myString.includes("Empyrean")){
+        out = 240;
+    }else if(myString.includes("Crucible")){
+        out = 480;
+    }else if(myString.includes("Master Undertaker")){
+        out = 60;
+    }else if(myString.includes("Undertaker")){
+        out = 30;
+    }else if(myString.includes("Master Soulstealer")){
+        out = 60;
+    }else if(myString.includes("Soulstealer")){
+        out = 30;
+    }else if(myString.includes("Shadowstalker")){
+        out = 60;
+    }else if(myString.includes("Stalker")){
+        out = 30;
+    }else if(myString.includes("Dreadforge")){
+        out = 60;
+    }else if(myString.includes("Forge")){
+        out = 30;
+    }else if(myString.includes("High Council")){
+        out = 60;
+    }else if(myString.includes("Council")){
+        out = 30;
+    }else if(myString.includes("Grand Conquest")){
+        out = 60;
+    }else if(myString.includes("Conquest")){
+        out = 30;
+    }else if(myString.includes("Alpha Harpy")){
+        out = 60;
+    }else if(myString.includes("Harpy")){
+        out = 30;
+    }else if(myString.includes("Alpha Manticore")){
+        out = 30;
+    }else if(myString.includes("Manticore")){
+        out = 30;
+    }else if(myString.includes("First Blood")){
+        out = 20;
+    }else if(myString.includes("Abyssal")){
+        out = 60;
+    }else if(myString.includes("Vagabond")){
+        out = 30;
+    }else if(myString.includes("Seeker")){
+        out = 60;
+    }else if(myString.includes("Scholar")){
+        out = 100;
+    }else if(myString.includes("Redeemer")){
+        out = 160;
+    }else if(myString.includes("Subjugator")){
+        out = 240;
+    }else if(myString.includes("Dominator")){
+        out = 480;
+    }else if(myString.includes("Portent")){
         out = 30;
     }else if(myString.includes("Harbinger")){
         out = 60;
