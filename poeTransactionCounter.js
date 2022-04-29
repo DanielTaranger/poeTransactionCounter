@@ -7,10 +7,64 @@ for(var i = 0; i < elements.length; ++i){
     myString = myString.trim();
 
     var out = 0;
-    if(myString.includes("Deadly Renegade")){
+    if(myString.includes("Dread")){
+        out = 30;
+    }else if(myString.includes("Ancient Dread")){
         out = 60;
+    }else if(myString.includes("Primordial Dread")){
+        out = 90;
+    }else if(myString.includes("Aesir")){
+        out = 30;
+    }else if(myString.includes("Aesir Warrior")){
+        out = 60;
+    }else if(myString.includes("Aesir Demigod")){
+        out = 90;
+    }else if(myString.includes("Crescent")){
+        out = 30;
+    }else if(myString.includes("Silver Crescent")){
+        out = 60;
+    }else if(myString.includes("Emberkeep")){
+        out = 30;
+    }else if(myString.includes("Elite Emberkeep")){
+        out = 60;
+    }else if(myString.includes("Supreme Emberkeep")){
+        out = 90;
+    }else if(myString.includes("Wyrm")){
+        out = 30;
+    }else if(myString.includes("Wyrmcaller")){
+        out = 60;
+    }else if(myString.includes("Wyrmlord")){
+        out = 90;
+    }else if(myString.includes("Incinerator")){
+        out = 480;
+    }else if(myString.includes("Ravager")){
+        out = 240;
+    }else if(myString.includes("Annihilator")){
+        out = 160;
+    }else if(myString.includes("Nullifier")){
+        out = 100;
+    }else if(myString.includes("Imperator")){
+        out = 60;
+    }else if(myString.includes("Liege")){
+        out = 30;
+    }else if(myString.includes("Intrepid Liege")){
+        out = 60;
+    }else if(myString.includes("Triumphant Liege")){
+        out = 90;
+    }else if(myString.includes("Soulkeeper")){
+        out = 30;
+    }else if(myString.includes("Soulkeeper Vizier")){
+        out = 60;
+    }else if(myString.includes("Soulkeeper Demigod")){
+        out = 90;
+    }else if(myString.includes("Imperial Sun")){
+        out = 60;
+    }else if(myString.includes("Sun")){
+        out = 30;
     }else if(myString.includes("Renegade")){
         out = 30;
+    }else if(myString.includes("Deadly Renegade")){
+        out = 60;
     }else if(myString.includes("Elite Faithsworn")){
         out = 60;
     }else if(myString.includes("Faithsworn")){
