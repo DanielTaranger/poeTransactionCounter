@@ -253,14 +253,14 @@ var microtransactions = {
     "Brazil": 40,
 }
 
-for(let element of elements) {
+for(var element of elements) {
     tableEntry = element.innerHTML;
     tableEntry = tableEntry.trim();
 
     var out = 0;
 
-    for(let mtx in microtransactions) {
-        let value = microtransactions[mtx];
+    for(var mtx in microtransactions) {
+        var value = microtransactions[mtx];
         if (tableEntry.includes(mtx) && value > out){
             out = value;
         }
