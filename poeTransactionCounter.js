@@ -270,7 +270,7 @@ for(let element of elements) {
         errormessage += "\n" + tableEntry;
     }
 
-    let before = total;
+    var before = total;
     total += out;
     
     console.log(tableEntry);
