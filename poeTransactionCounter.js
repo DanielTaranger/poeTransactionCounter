@@ -3,6 +3,21 @@ var total = 0;
 var errormessage = "";
 
 var microtransactions = {
+    // 2023 Core
+    "Tormentor": 60,
+    "Hellfire": 100,
+    "Bloodthirsty": 160,
+    "Chronomancer": 240,
+    "Voidborn": 480,
+
+    // The Forbidden Sanctum
+    "Forgekeeper": 30,
+    "Forgeguard": 60,
+    "Forgemaster": 90,
+    "Gemling": 30,
+    "Gemling Artificer": 60,
+    "Gemling Sage": 90,
+
     // Lake of Kalandra
     "Knight": 30,
     "Knightmaster": 60,
@@ -51,8 +66,8 @@ var microtransactions = {
     "Aesir Demigod": 90,
 
     // Ultimatum
-    "Imperial Sun": 60,
     "Sun": 30,
+    "Imperial Sun": 60,
     "Crescent": 30,
     "Silver Crescent": 60,
 
@@ -243,7 +258,6 @@ var microtransactions = {
     "1065 Point": 100,
 
     // Vault Passes
-    "Vault Pass (Kalandra)": 30,
     "Vault Pass": 30,
 
     // Questionmark
