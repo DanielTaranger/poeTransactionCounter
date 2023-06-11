@@ -3,6 +3,14 @@ var total = 0;
 var errormessage = "";
 
 var microtransactions = {
+    // Crucible
+    "Lithomancer": 30,
+    "Ancestral Lithomancer": 60,
+    "Ancient Lithomancer": 90,
+    "Enchanter": 30,
+    "Master Enchanter": 60,
+    "High Enchanter": 90,
+
     // 2023 Core
     "Tormentor": 60,
     "Hellfire": 100,
@@ -268,31 +276,30 @@ var microtransactions = {
 }
 
 for(var element of elements) {
-    tableEntry = element.innerHTML;
-    tableEntry = tableEntry.trim();
+    transactionName = element.innerHTML.trim();
 
     var out = 0;
 
     for(var mtx in microtransactions) {
         var value = microtransactions[mtx];
-        if (tableEntry.includes(mtx) && value > out){
+        if (transactionName.includes(mtx) && value > out){
             out = value;
         }
     }
 
     if(out === 0){
-        errormessage += "\n" + tableEntry;
+        errormessage += "\n" + transactionName;
     }
 
     var before = total;
     total += out;
     
-    console.log(tableEntry);
-    console.log(before + "+"+ out + "=" + total);
+    console.log(`${transactionName} (\$${out})`);
+    console.log(`${before} + ${out} = ${total}`);
 }
 
 if(errormessage == ""){
-    alert("You have spent " + "$" + total + " on microtransactions");
+    alert(`You have spent \$${total} on microtransactions`);
 }else{
     alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: "  + errormessage);
 }
