@@ -1,7 +1,22 @@
-var elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
-var total = 0;
-var errormessage = "";
-var microtransactions = {
+const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
+
+const microtransactions = {
+
+    // 2024 Core
+    "Kalguuran Runesmith": 60,
+    "Shackled Immortal:": 100,
+    "Vaal Serpent-God": 160,
+    "Karui Elemancer": 240,
+    "Sandwraith Assassin": 480,
+
+    // Ancestors
+    "Shade": 30,
+    "Haunting Shade": 60,
+    "Midnight Shade": 90,
+    "Disciple": 30,
+    "Ardent Disciple": 60,
+    "Devoted Disciple": 90,
+
     // Crucible
     "Lithomancer": 30,
     "Ancestral Lithomancer": 60,
@@ -146,7 +161,7 @@ var microtransactions = {
     "Vanguard": 160,
     "Empyrean": 240,
     "Crucible": 480,
-    
+
     // Betrayal
     "Undertaker": 30,
     "Master Undertaker": 60,
@@ -170,7 +185,7 @@ var microtransactions = {
     "Alpha Harpy": 60,
     "Manticore": 30,
     "Alpha Manticore": 30,
-    
+
     // First Blood
     "First Blood": 20,
 
@@ -274,31 +289,34 @@ var microtransactions = {
     "Brazil": 40,
 }
 
-for(var element of elements) {
+let total = 0;
+let errormessage = "";
+
+for (let element of elements) {
     transactionName = element.innerHTML.trim();
 
-    var out = 0;
+    let out = 0;
 
-    for(var mtx in microtransactions) {
-        var value = microtransactions[mtx];
-        if (transactionName.includes(mtx) && value > out){
+    for (let mtx in microtransactions) {
+        let value = microtransactions[mtx];
+        if (transactionName.includes(mtx) && value > out) {
             out = value;
         }
     }
 
-    if(out === 0){
+    if (out === 0) {
         errormessage += "\n" + transactionName;
     }
 
-    var before = total;
+    let before = total;
     total += out;
-    
+
     console.log(`${transactionName} (\$${out})`);
     console.log(`${before} + ${out} = ${total}`);
 }
 
-if(errormessage == ""){
+if (errormessage == "") {
     alert(`You have spent \$${total} on microtransactions`);
-}else{
-    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: "  + errormessage);
+} else {
+    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: " + errormessage);
 }
