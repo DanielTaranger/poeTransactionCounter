@@ -1,7 +1,6 @@
 var elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 var total = 0;
 var errormessage = "";
-
 var microtransactions = {
     // Crucible
     "Lithomancer": 30,
