@@ -1,179 +1,304 @@
-var elements = document.getElementsByClassName("packageName el FontinBold");
+var elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 var total = 0;
 var errormessage = "";
+var microtransactions = {
+    // Crucible
+    "Lithomancer": 30,
+    "Ancestral Lithomancer": 60,
+    "Ancient Lithomancer": 90,
+    "Enchanter": 30,
+    "Master Enchanter": 60,
+    "High Enchanter": 90,
 
-for (var i = 0; i < elements.length; ++i) {
-    myString = elements[i].innerHTML;
-    myString = myString.trim();
+    // 2023 Core
+    "Tormentor": 60,
+    "Hellfire": 100,
+    "Bloodthirsty": 160,
+    "Chronomancer": 240,
+    "Voidborn": 480,
 
-    var out = 0;
-    if (myString.includes("Vagabond")) {
-        out = 30;
-    } else if (myString.includes("Seeker")) {
-        out = 60;
-    } else if (myString.includes("Scholar")) {
-        out = 100;
-    } else if (myString.includes("Redeemer")) {
-        out = 160;
-    } else if (myString.includes("Subjugator")) {
-        out = 240;
-    } else if (myString.includes("Dominator")) {
-        out = 480;
-	} else if (myString.includes("Undertaker")) {
-        out = 30;
-	} else if (myString.includes("Master Undertaker")) {
-        out = 60;
-	} else if (myString.includes("Soultaker")) {
-        out = 30;
-	} else if (myString.includes("Master Soultaker")) {
-        out = 60;
-	} else if (myString.includes("Stalker")) {
-        out = 30;
-	} else if (myString.includes("Shadowstalker")) {
-        out = 60;
-	} else if (myString.includes("Forge")) {
-        out = 30;
-	} else if (myString.includes("Dreadforge")) {
-        out = 60;
-	} else if (myString.includes("Grand Conquest")) {
-        out = 60;
-	} else if (myString.includes("High Council")) {
-        out = 60;
-	} else if (myString.includes("Alpha Harpy")) {
-        out = 60;
-	} else if (myString.includes("Harpy")) {
-        out = 30;
-	} else if (myString.includes("Alpha Manticore")) {
-        out = 60;
-	} else if (myString.includes("Manticore")) {
-        out = 30;
-	} else if (myString.includes("Abyssal Imp")) {
-        out = 60;
-	} else if (myString.includes("Abyssal Lich")) {
-        out = 60;
-    } else if (myString.includes("Portent")) {
-        out = 30;
-    } else if (myString.includes("Harbinger")) {
-        out = 60;
-    } else if (myString.includes("Classic")) {
-        out = 30;
-    } else if (myString.includes("Oriath")) {
-        out = 30;
-    } else if (myString.includes("Outlaw")) {
-        out = 60;
-    } else if (myString.includes("Legion")) {
-        out = 100;
-    } else if (myString.includes("Eclipse")) {
-        out = 160;
-    } else if (myString.includes("Beast")) {
-        out = 240;
-    } else if (myString.includes("Kitava")) {
-        out = 480;
-    } else if (myString.includes("Legacy")) {
-        out = 60;
-    } else if (myString.includes("Breachspawn")) {
-        out = 30;
-    } else if (myString.includes("Breachlord")) {
-        out = 60;
-    } else if (myString.includes("Minotaur")) {
-        out = 50;
-    } else if (myString.includes("Hydra")) {
-        out = 110;
-    } else if (myString.includes("Chimera")) {
-        out = 220;
-    } else if (myString.includes("Phoenix")) {
-        out = 440;
-    } else if (myString.includes("Prophecy")) {
-        out = 60;
-    } else if (myString.includes("Aspirant")) {
-        out = 50;
-    } else if (myString.includes("Challenger")) {
-        out = 110;
-    } else if (myString.includes("Sovereign")) {
-        out = 220;
-    } else if (myString.includes("Ascendant")) {
-        out = 440;
-    } else if (myString.includes("Axiom")) {
-        out = 60;
-    } else if (myString.includes("Vaal")) {
-        out = 130;
-    } else if (myString.includes("Lunaris")) {
-        out = 260;
-    } else if (myString.indexOf("Highgate") == 0) {
-        out = 1100;
-    } else if (myString.includes("Awakening")) {
-        out = 30;
-    } else if (myString.includes("Apprentice")) {
-        out = 50;
-    } else if (myString.includes("Journeyman")) {
-        out = 100;
-    } else if (myString.includes("Master")) {
-        out = 200;
-    } else if (myString.includes("Grandmaster")) {
-        out = 500;
-    } else if (myString.includes("Survivor")) {
-        out = 50;
-    } else if (myString.includes("Warrior")) {
-        out = 120;
-    } else if (myString.includes("Champion")) {
-        out = 280;
-    } else if (myString.includes("Conqueror")) {
-        out = 900;
-    } else if (myString.includes("Open Beta")) {
-        out = 30;
-    } else if (myString.includes("Regal")) {
-        out = 50;
-    } else if (myString.includes("Divine")) {
-        out = 110;
-    } else if (myString.includes("Exalted")) {
-        out = 270;
-    } else if (myString.includes("Eternal")) {
-        out = 1500;
-    } else if (myString.includes("Ruler of Wraeclast")) {
-        out = 12500;
-    } else if (myString.includes("Kiwi")) {
-        out = 25;
-    } else if (myString.includes("Bronze")) {
-        out = 50;
-    } else if (myString.includes("Silver")) {
-        out = 100;
-    } else if (myString.includes("Gold")) {
-        out = 250;
-    } else if (myString.includes("Diamond")) {
-        out = 1000;
-    } else if (myString.includes("50 Point")) {
-        out = 5;
-    } else if (myString.includes("100 Point")) {
-        out = 10;
-    } else if (myString.includes("200 Point")) {
-        out = 20;
-    } else if (myString.includes("516 Point")) {
-        out = 50;
-    } else if (myString.includes("1065 Point")) {
-        out = 100;
-    } else if (myString.indexOf("Supporter") == 0) {
-        out = 15;
-	} else if (myString.includes("First Blood")) {
-        out = 20;
-    } else if (myString.includes("Koala")) {
-        out = 14;
-    } else if (myString.includes("Angelic Mask")) {
-        out = 5;
-    } else if (myString.includes("Comic")) {
-        out = 4;
-    } else if (myString.includes("Brazil")) {
-        out = 40;
-    } else if (myString.includes("Early")) {
-        out = 10;
-    } else {
-        errormessage = errormessage + "\n" + myString;
-    }
-    console.log(myString);
-    console.log(total + "+" + out + "=" + (total = total + parseInt(out)));
+    // The Forbidden Sanctum
+    "Forgekeeper": 30,
+    "Forgeguard": 60,
+    "Forgemaster": 90,
+    "Gemling": 30,
+    "Gemling Artificer": 60,
+    "Gemling Sage": 90,
+
+    // Lake of Kalandra
+    "Knight": 30,
+    "Knightmaster": 60,
+    "Knightlord": 90,
+    "Rogue": 30,
+    "Rogue Stalker": 60,
+    "Rogue Overseer": 90,
+
+    // Sentinel
+    "Reaper": 30,
+    "Savage Reaper": 60,
+    "Sanguine Reaper": 90,
+    "Arcanist": 30,
+    "Esteemed Arcanist": 60,
+    "Grand Arcanist": 90,
+
+    // Archnemesis
+    "Wyrm": 30,
+    "Wyrmcaller": 60,
+    "Wyrmlord": 90,
+    "Emberkeep": 30,
+    "Elite Emberkeep": 60,
+    "Supreme Emberkeep": 90,
+
+    // 2022 Core
+    "Imperator": 60,
+    "Nullifier": 100,
+    "Annihilator": 160,
+    "Ravager": 240,
+    "Incinerator": 480,
+
+    // Scourge
+    "Liege": 30,
+    "Intrepid Liege": 60,
+    "Triumphant Liege": 90,
+    "Dread": 30,
+    "Ancient Dread": 60,
+    "Primordial Dread": 90,
+
+    // Expedition
+    "Soulkeeper": 30,
+    "Soulkeeper Vizier": 60,
+    "Soulkeeper Demigod": 90,
+    "Aesir": 30,
+    "Aesir Warrior": 60,
+    "Aesir Demigod": 90,
+
+    // Ultimatum
+    "Sun": 30,
+    "Imperial Sun": 60,
+    "Crescent": 30,
+    "Silver Crescent": 60,
+
+    // Ritual
+    "Renegade": 30,
+    "Deadly Renegade": 60,
+    "Faithsworn": 30,
+    "Elite Faithsworn": 60,
+
+    // 2021 Core
+    "Delve Core": 60,
+    "Breach Core": 100,
+    "Abyss Core": 160,
+    "Harvest Core": 240,
+    "Atlas Core": 480,
+
+    // Heist
+    "Spellblade": 30,
+    "Master Spellblade": 60,
+    "Eagle": 30,
+    "Imperial Eagle": 60,
+
+    // Harvest
+    "Malice": 30,
+    "Insatiable Malice": 60,
+    "Benevolence": 30,
+    "Divine Benevolence": 60,
+
+    // Delirium
+    "Fateweaver": 30,
+    "Elite Fateweaver": 60,
+    "Darkseer": 30,
+    "Elder Darkseer": 60,
+
+    // 2020 Core
+    "Basilisk": 60,
+    "Crusader": 100,
+    "Eyrie": 160,
+    "Judicator": 240,
+    "Orion": 480,
+
+    // Metamorph
+    "Sanctum": 30,
+    "Grand Sanctum": 60,
+    "Damnation": 30,
+    "Eternal Damnation": 60,
+
+    // Blight
+    "Sentinel": 30,
+    "Sentinel Overlord": 60,
+    "Lich": 30,
+    "Bane Lich": 60,
+
+    // Legion
+    "Cult of Darkness": 30,
+    "Cult of Apocalypse": 60,
+    "Blood Knight": 30,
+    "Blood Guardian": 60,
+
+    // Synthesis
+    "Sunstone": 30,
+    "Sunspire": 60,
+    "Doomcrow": 30,
+    "Doomguard": 60,
+
+    // 2019 Core
+    "Pitfighter": 60,
+    "Assassin": 100,
+    "Vanguard": 160,
+    "Empyrean": 240,
+    "Crucible": 480,
+    
+    // Betrayal
+    "Undertaker": 30,
+    "Master Undertaker": 60,
+    "Soulstealer": 30,
+    "Master Soulstealer": 60,
+
+    // Delve
+    "Stalker": 30,
+    "Shadowstalker": 60,
+    "Forge": 30,
+    "Dreadforge": 60,
+
+    // Incursion
+    "Council": 30,
+    "High Council": 60,
+    "Conquest": 30,
+    "Grand Conquest": 60,
+
+    // Bestiary
+    "Harpy": 30,
+    "Alpha Harpy": 60,
+    "Manticore": 30,
+    "Alpha Manticore": 30,
+    
+    // First Blood
+    "First Blood": 20,
+
+    // Abyss
+    "Abyssal Imp": 60,
+    "Abyssal Lich": 60,
+
+    // War for the Atlas
+    "Vagabond": 30,
+    "Seeker": 60,
+    "Scholar": 100,
+    "Redeemer": 160,
+    "Subjugator": 240,
+    "Dominator": 480,
+
+    // Harbinger
+    "Portent": 30,
+    "Harbinger": 60,
+
+    // The Fall of Oriath
+    "Oriath": 30,
+    "Outlaw": 60,
+    "Legion": 100,
+    "Eclipse": 160,
+    "Beast": 240,
+    "Kitava": 480,
+
+    // Legacy
+    "Classic": 30,
+    "Legacy": 60,
+
+    // Breach
+    "Breachspawn": 30,
+    "Breachlord": 60,
+
+    // Atlas of Worlds
+    "Minotaur": 50,
+    "Hydra": 110,
+    "Chimera": 220,
+    "Phoenix": 440,
+
+    // Prophecy
+    "Prophecy": 60,
+
+    // Ascendancy
+    "Aspirant": 50,
+    "Challenger": 110,
+    "Sovereign": 220,
+    "Ascendant": 440,
+
+    // The Awakening
+    "Awakening": 30,
+    "Axiom": 60,
+    "Vaal": 130,
+    "Lunaris": 260,
+    "Highgate": 1100,
+
+    // Forsaken Masters
+    "Apprentice": 50,
+    "Journeyman": 100,
+    "Master": 200,
+    "Grandmaster": 500,
+
+    // Release
+    "Survivor": 50,
+    "Warrior": 120,
+    "Champion": 280,
+    "Conqueror": 900,
+
+    // Open Beta
+    "Open Beta": 30,
+    "Regal": 50,
+    "Divine": 110,
+    "Exalted": 270,
+    "Eternal": 1500,
+    "Ruler of Wraeclast": 12500,
+
+    // Closed Beta
+    "Early Access": 10,
+    "Closed Beta": 15,
+    "Kiwi": 25,
+    "Bronze": 50,
+    "Silver": 100,
+    "Gold": 250,
+    "Diamond": 1000,
+
+    // Straight Points
+    "50 Point": 5,
+    "100 Point": 10,
+    "200 Point": 20,
+    "516 Point": 50,
+    "1065 Point": 100,
+
+    // Vault Passes
+    "Vault Pass": 30,
+
+    // Questionmark
+    "Comic": 4,
+    "Angelic Mask": 5,
+    "Koala": 14,
+    "Brazil": 40,
 }
 
-if (errormessage == "") {
-    alert("You have spent " + "$" + total + " on microtransactions");
-} else {
-    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: " + errormessage);
+for(var element of elements) {
+    transactionName = element.innerHTML.trim();
+
+    var out = 0;
+
+    for(var mtx in microtransactions) {
+        var value = microtransactions[mtx];
+        if (transactionName.includes(mtx) && value > out){
+            out = value;
+        }
+    }
+
+    if(out === 0){
+        errormessage += "\n" + transactionName;
+    }
+
+    var before = total;
+    total += out;
+    
+    console.log(`${transactionName} (\$${out})`);
+    console.log(`${before} + ${out} = ${total}`);
+}
+
+if(errormessage == ""){
+    alert(`You have spent \$${total} on microtransactions`);
+}else{
+    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: "  + errormessage);
 }
