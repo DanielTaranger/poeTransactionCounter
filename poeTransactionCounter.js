@@ -184,7 +184,7 @@ const microtransactions = {
     "Harpy": 30,
     "Alpha Harpy": 60,
     "Manticore": 30,
-    "Alpha Manticore": 30,
+    "Alpha Manticore": 60,
 
     // First Blood
     "First Blood": 20,
