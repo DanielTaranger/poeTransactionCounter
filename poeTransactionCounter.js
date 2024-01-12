@@ -4,7 +4,7 @@ const microtransactions = {
 
     // 2024 Core
     "Kalguuran Runesmith": 60,
-    "Shackled Immortal:": 100,
+    "Shackled Immortal": 100,
     "Vaal Serpent-God": 160,
     "Karui Elemancer": 240,
     "Sandwraith Assassin": 480,
