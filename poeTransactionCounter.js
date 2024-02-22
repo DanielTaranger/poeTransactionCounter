@@ -2,6 +2,21 @@ var elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 var total = 0;
 var errormessage = "";
 var microtransactions = {
+    // 2024 Core
+    "Kalguuran Runesmith":60,
+    "Shackled Immortal":100,
+    "Vaal Serpent-God":1600,
+    "Karui Elemancer":2400,
+    "Sandwraith Assassin":480,
+
+    // Trial of the Ancestors
+    "Shade":30,
+    "Haunting Shade":60,
+    "Midnight Shade":90,
+    "Disciple":30,
+    "Ardent Disciple":60,
+    "Devoted Disciple":90,
+
     // Crucible
     "Lithomancer": 30,
     "Ancestral Lithomancer": 60,
