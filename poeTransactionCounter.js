@@ -1,7 +1,14 @@
 const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 
 const microtransactions = {
-
+    //Necropolis
+    "Solar": 30,
+    "Solar Knight": 60,
+    "Solar Guardian": 90,
+    "Eldritch": 30,
+    "Eldritch Hunger": 60,
+    "Eldritch Horror": 90,
+    
     // 2024 Core
     "Kalguuran Runesmith": 60,
     "Shackled Immortal": 100,
