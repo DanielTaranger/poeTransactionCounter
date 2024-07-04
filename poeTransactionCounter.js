@@ -6,14 +6,20 @@ const microtransactions = {
     "Exilecon 2023 Ultra VIP": 2000,
     "Exilecon 2023 VIP": 700,
     "Exilecon 2023": 230,
+    // will never acually match
+    // because "Exilecon 2023" is more expensive
+    // TODO: implement Levenshtein distance?
     "Exilecon 2023 Balcony Ticket": 210,
 
     // Exilecon 2019
     "Exilecon Ultra VIP": 1000,
     "Exilecon VIP": 500,
     "Exilecon": 200,
+    // will never acually match
+    // because "Exilecon" is more expensive
+    // TODO: implement Levenshtein distance?
     "Exilecon Balcony Ticket": 180,
-    
+
     //Necropolis
     "Solar": 30,
     "Solar Knight": 60,
@@ -21,7 +27,7 @@ const microtransactions = {
     "Eldritch": 30,
     "Eldritch Hunger": 60,
     "Eldritch Horror": 90,
-    
+
     // 2024 Core
     "Kalguuran Runesmith": 60,
     "Shackled Immortal": 100,
@@ -102,7 +108,8 @@ const microtransactions = {
     // Expedition
     "Soulkeeper": 30,
     "Soulkeeper Vizier": 60,
-    "Soulkeepr Vizier": 60, //ggg have misspelled this in the account transactions list
+    // ggg has misspelled this in the account transactions list
+    "Soulkeepr Vizier": 60,
     "Soulkeeper Demigod": 90,
     "Aesir": 30,
     "Aesir Warrior": 60,
