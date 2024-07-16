@@ -102,6 +102,7 @@ const microtransactions = {
     // Expedition
     "Soulkeeper": 30,
     "Soulkeeper Vizier": 60,
+    "Soulkeepr Vizier": 60, //ggg have misspelled this in the account transactions list
     "Soulkeeper Demigod": 90,
     "Aesir": 30,
     "Aesir Warrior": 60,
