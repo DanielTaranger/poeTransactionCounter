@@ -1,6 +1,12 @@
 const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
-
 const microtransactions = {
+    // Settlers of Kalguur
+    "Paladin": 30,
+    "Divine Paladin": 60,
+    "Sacred Paladin": 90,
+    "Penance": 30,
+    "Acolyte's Penance": 60,
+    "Zealot's Penance": 90,
 
     // Exilecon 2023
     "Exilecon 2023 Ultra VIP": 2000,
@@ -20,7 +26,7 @@ const microtransactions = {
     // TODO: implement Levenshtein distance?
     "Exilecon Balcony Ticket": 180,
 
-    //Necropolis
+    // Necropolis
     "Solar": 30,
     "Solar Knight": 60,
     "Solar Guardian": 90,
@@ -35,7 +41,7 @@ const microtransactions = {
     "Karui Elemancer": 240,
     "Sandwraith Assassin": 480,
 
-    // Ancestors
+    // Trial of the Ancestors
     "Shade": 30,
     "Haunting Shade": 60,
     "Midnight Shade": 90,
