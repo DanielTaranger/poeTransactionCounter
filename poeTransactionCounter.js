@@ -285,6 +285,7 @@ const microtransactions = {
 
     // Release
     "Survivor Supporter Pack": 50,
+    "Survivor Pack": 50
     "Warrior Supporter Pack": 120,
     "Champion Supporter Pack": 280,
     "Conqueror Supporter Pack": 900,
