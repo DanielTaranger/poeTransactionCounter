@@ -301,7 +301,7 @@ const microtransactions = {
     // Closed Beta
     "Early Access": 10,
     "Closed Beta": 15,
-    "Kiwi Supporter Pack": 25,
+    "Kiwi Pack": 25,
     "Bronze Supporter Pack": 50,
     "Silver Supporter Pack": 100,
     "Gold Supporter Pack": 250,
