@@ -4,9 +4,12 @@ const microtransactions = {
     "Paladin": 30,
     "Divine Paladin": 60,
     "Sacred Paladin": 90,
+    // the first packs with apostrophes
     "Penance": 30,
     "Acolyte's Penance": 60,
+    "Acolytes Penance": 60,
     "Zealot's Penance": 90,
+    "Zealots Penance": 90,
 
     // Exilecon 2023
     "Exilecon 2023 Ultra VIP": 2000,
