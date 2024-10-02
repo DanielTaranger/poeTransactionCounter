@@ -317,9 +317,17 @@ const microtransactions = {
     // Vault Passes
     "Vault Pass": 30,
 
-    // Questionmark
+    // other MTX
+    //
+    // digital comic: Origins
+    // might be unreliable due to different price tiers
+    // https://www.pathofexile.com/forum/view-thread/1703254
     "Comic": 4,
+    // 2014 charity event item
+    // https://www.pathofexile.com/forum/view-thread/919315
     "Angelic Mask": 5,
+    // 2015 Australia Day event item
+    // https://www.pathofexile.com/forum/view-thread/1185814
     "Koala": 14,
     "Brazil": 40,
 }
