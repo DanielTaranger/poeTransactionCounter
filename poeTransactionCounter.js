@@ -20,6 +20,14 @@ const microtransactions = {
     // TODO: implement Levenshtein distance?
     "Exilecon Balcony Ticket": 180,
 
+    //Settlers of Kalguur
+    "Paladin": 300,
+    "Divine Paladin": 600,
+    "Sacred Paladin": 900,
+    "Penance": 300,
+    "Acolytes Penance": 600,
+    "Zealots Penance": 900,
+
     //Necropolis
     "Solar": 30,
     "Solar Knight": 60,
