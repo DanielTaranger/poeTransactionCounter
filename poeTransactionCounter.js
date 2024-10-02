@@ -1,3 +1,34 @@
+var levenshtein = (function() {
+    var row2 = [];
+    return function(s1, s2) {
+        if (s1 === s2) {
+            return 0;
+        } else {
+            var s1_len = s1.length, s2_len = s2.length;
+            if (s1_len && s2_len) {
+                var i1 = 0, i2 = 0, a, b, c, c2, row = row2;
+                while (i1 < s1_len)
+                    row[i1] = ++i1;
+                while (i2 < s2_len) {
+                    c2 = s2.charCodeAt(i2);
+                    a = i2;
+                    ++i2;
+                    b = i2;
+                    for (i1 = 0; i1 < s1_len; ++i1) {
+                        c = a + (s1.charCodeAt(i1) === c2 ? 0 : 1);
+                        a = row[i1];
+                        b = b < a ? (b < c ? b + 1 : c) : (a < c ? a + 1 : c);
+                        row[i1] = b;
+                    }
+                }
+                return b;
+            } else {
+                return s1_len + s2_len;
+            }
+        }
+    };
+})();
+
 const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 const microtransactions = {
     // PoE2 Early Access
@@ -368,11 +399,18 @@ for (let element of elements) {
     transactionName = element.innerHTML.trim();
 
     let out = 0;
-
+    let levenshtein_match = "";
+    let best_levenshtein_score = Infinity;
     for (let mtx in microtransactions) {
-        let value = microtransactions[mtx];
-        if (transactionName.includes(mtx) && value > out) {
-            out = value;
+        var current_levenshtein_score = levenshtein(transactionName, mtx)
+        if (current_levenshtein_score == best_levenshtein_score) {
+            console.log(`tied ${mtx} with score ${best_levenshtein_score}`)
+        }
+        // lower levenshtein distance is better
+        if (current_levenshtein_score < best_levenshtein_score) {
+            out = microtransactions[mtx];
+            best_levenshtein_score = current_levenshtein_score;
+            levenshtein_match = mtx;
         }
     }
 
@@ -383,7 +421,7 @@ for (let element of elements) {
     let before = total;
     total += out;
 
-    console.log(`${transactionName} (\$${out})`);
+    console.log(`${transactionName} (\$${out}) matched with "${levenshtein_match}"`);
     console.log(`${before} + ${out} = ${total}`);
 }
 
