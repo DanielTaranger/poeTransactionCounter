@@ -281,23 +281,34 @@ const microtransactions = {
     "Highgate": 1100,
 
     // Forsaken Masters
+    "Apprentice Pack": 50,
     "Apprentice Supporter Pack": 50,
+    "Journeyman Pack": 100,
     "Journeyman Supporter Pack": 100,
+    "Master Pack": 200,
     "Master Supporter Pack": 200,
+    "Grandmaster Pack": 500,
     "Grandmaster Supporter Pack": 500,
 
     // Release
     "Survivor Supporter Pack": 50,
     "Survivor Pack": 50,
+    "Warrior Pack": 120,
     "Warrior Supporter Pack": 120,
+    "Champion Pack": 280,
     "Champion Supporter Pack": 280,
+    "Conqueror Pack": 900,
     "Conqueror Supporter Pack": 900,
 
     // Open Beta
     "Open Beta": 30,
+    "Regal Pack": 50,
     "Regal Supporter Pack": 50,
+    "Divine Pack": 110,
     "Divine Supporter Pack": 110,
+    "Exalted Pack": 270,
     "Exalted Supporter Pack": 270,
+    "Eternal Pack": 1500,
     "Eternal Supporter Pack": 1500,
     "Ruler of Wraeclast": 12500,
 
@@ -305,9 +316,13 @@ const microtransactions = {
     "Early Access": 10,
     "Closed Beta": 15,
     "Kiwi Pack": 25,
+    "Bronze Pack": 50,
     "Bronze Supporter Pack": 50,
+    "Silver Pack": 100,
     "Silver Supporter Pack": 100,
+    "Gold Pack": 250,
     "Gold Supporter Pack": 250,
+    "Diamond Pack": 1000,
     "Diamond Supporter Pack": 1000,
 
     // Straight Points
