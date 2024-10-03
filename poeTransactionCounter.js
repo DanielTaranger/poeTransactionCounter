@@ -20,12 +20,12 @@ const microtransactions = {
     "Exilecon Balcony Ticket": 180,
 
     //Settlers of Kalguur
-    "Paladin": 300,
-    "Divine Paladin": 600,
-    "Sacred Paladin": 900,
-    "Penance": 300,
-    "Acolytes Penance": 600,
-    "Zealots Penance": 900,
+    "Paladin": 30,
+    "Divine Paladin": 60,
+    "Sacred Paladin": 90,
+    "Penance": 30,
+    "Acolytes Penance": 60,
+    "Zealots Penance": 90,
 
     //Necropolis
     "Solar": 30,
