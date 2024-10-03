@@ -1,7 +1,6 @@
 const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 
 const microtransactions = {
-
     // Exilecon 2023
     "Exilecon 2023 Ultra VIP": 2000,
     "Exilecon 2023 VIP": 700,
@@ -288,13 +287,14 @@ const microtransactions = {
     // Release
     "Survivor Supporter Pack": 50,
     "Warrior Supporter Pack": 120,
-    "Champion Supporter Pack": 280,
+    "Champion Pack": 280,
     "Conqueror Supporter Pack": 900,
 
     // Open Beta
     "Open Beta": 30,
     "Regal Supporter Pack": 50,
     "Divine Supporter Pack": 110,
+    "Divine Pack": 110,
     "Exalted Supporter Pack": 270,
     "Eternal Supporter Pack": 1500,
     "Ruler of Wraeclast": 12500,
@@ -302,6 +302,7 @@ const microtransactions = {
     // Closed Beta
     "Early Access": 10,
     "Closed Beta": 15,
+    "Gold Pack": 250,
     "Kiwi Supporter Pack": 25,
     "Bronze Supporter Pack": 50,
     "Silver Supporter Pack": 100,
