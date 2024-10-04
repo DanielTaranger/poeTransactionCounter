@@ -304,7 +304,7 @@ const microtransactions = {
     "Closed Beta": 15,
     "Gold Pack": 250,
     "Kiwi Supporter Pack": 25,
-    "Bronze Supporter Pack": 50,
+    "Bronze Pack": 50,
     "Silver Supporter Pack": 100,
     "Gold Supporter Pack": 250,
     "Diamond Supporter Pack": 1000,
