@@ -136,9 +136,6 @@ const microtransactions = {
     "Faithsworn": 30,
     "Elite Faithsworn": 60,
 
-    // 2021 Endless Delve / Nexus -- https://www.pathofexile.com/forum/view-thread/3218435
-    "Cursed Supporter Pack": 60,
-
     // 2021 Core
     "Delve Core": 60,
     "Breach Core": 100,
@@ -351,6 +348,9 @@ const microtransactions = {
     // https://www.pathofexile.com/forum/view-thread/1185814
     "Koala": 14,
     "Brazil": 40,
+    // 2021 Endless Delve / Nexus
+    // https://www.pathofexile.com/forum/view-thread/3218435
+    "Cursed Supporter Pack": 60,
 }
 
 let total = 0;
