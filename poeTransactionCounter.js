@@ -1,5 +1,13 @@
 const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 const microtransactions = {
+    // PoE2 Early Access
+    "Path of Exile 2 Early Access": 30,
+    "Lord of Ogham": 60,
+    "King of the Faridun": 100,
+    "Thaumaturge of the Vaal": 160,
+    "Warlord of the Karui": 240,
+    "Liberator of Wraeclast": 480,
+
     // Settlers of Kalguur
     "Paladin": 30,
     "Divine Paladin": 60,
