@@ -25,9 +25,9 @@ To use this script:
         console.error("An error occurred:", error);
     }})();
     ```
-3. Go to https://www.pathofexile.com/my-account/transactions
-6. Right click your browser and select inspect element.
-7. Go to console, paste (Ctrl + v) and hit enter. The browser may require you to type in a safety word to allow to paste scripts.
+2. Go to https://www.pathofexile.com/my-account/transactions
+3. Right click your browser and select inspect element.
+4. Go to console, paste (Ctrl + v) and hit enter. The browser may require you to type in a safety word to allow to paste scripts.
 
 If you feel adventurous you can also save this Bookmarklet into your Bookmarks.
 
