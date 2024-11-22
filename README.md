@@ -1,10 +1,13 @@
-Instructions
+# Instructions
+
 To use this script:
 
-1. Login to your pathofexile.com transaction page 
-2. Copy the contents from the poeTransactionCounter.js script
+1. Login to your [pathofexile.com transaction page](https://www.pathofexile.com/my-account/transactions).
+2. Copy the contents from [the poeTransactionCounter.js script](https://github.com/DanielTaranger/poeTransactionCounter/blob/master/poeTransactionCounter.js).
 3. Right click your browser and select inspect element.
 4. Get to console and paste it in and hit enter. The browser may require you to type in a safety word to allow to paste scripts.
+
+## Bookmark
 
 If you feel adventurous you can also save this Bookmarklet into your Bookmarks.
 
@@ -13,6 +16,8 @@ javascript:(function()%7Bfunction%20callback()%7Bconsole.log(%22dummy%20log%22)%
 ```
 
 This bookmarklet uses the statically CDN to fetch the current version of the js script and runs it.
+
+---
 
 Respective reddit thread:
 https://www.reddit.com/r/pathofexile/comments/6fjm8w/toola_script_i_made_that_shows_how_much_you_spent/?sort=new
