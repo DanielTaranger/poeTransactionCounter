@@ -32,7 +32,7 @@ To use this script:
 If you feel adventurous you can also save this Bookmarklet into your Bookmarks.
 
 ```
-javascript:(function()%7Bfunction%20callback()%7Bconsole.log(%22dummy%20log%22)%7Dvar%20s%3Ddocument.createElement(%22script%22)%3Bs.src%3D%22https%3A%2F%2Fcdn.statically.io%2Fgh%2Fpeeteer1245%2FpoeTransactionCounter%2Fmaster%2FpoeTransactionCounter.js%22%3Bif(s.addEventListener)%7Bs.addEventListener(%22load%22%2Ccallback%2Cfalse)%7Delse%20if(s.readyState)%7Bs.onreadystatechange%3Dcallback%7Ddocument.body.appendChild(s)%3B%7D)()
+javascript:(function()%7Bfunction%20callback()%7Bconsole.log(%22dummy%20log%22)%7Dvar%20s%3Ddocument.createElement(%22script%22)%3Bs.src%3D%22https%3A%2F%2Fcdn.statically.io%2Fgh%2FDanielTaranger%2FpoeTransactionCounter%2Fmaster%2FpoeTransactionCounter.js%22%3Bif(s.addEventListener)%7Bs.addEventListener(%22load%22%2Ccallback%2Cfalse)%7Delse%20if(s.readyState)%7Bs.onreadystatechange%3Dcallback%7Ddocument.body.appendChild(s)%3B%7D)()
 ```
 
 This bookmarklet uses the statically CDN to fetch the current version of the js script and runs it.
