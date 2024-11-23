@@ -304,6 +304,7 @@ const microtransactions = {
     // Open Beta
     "Open Beta": 30,
     "Regal Supporter Pack": 50,
+    "Regal Pack": 50,
     "Divine Supporter Pack": 110,
     "Divine Pack": 110,
     "Exalted Pack": 270,
