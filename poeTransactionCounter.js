@@ -306,13 +306,14 @@ const microtransactions = {
     "Regal Supporter Pack": 50,
     "Divine Supporter Pack": 110,
     "Divine Pack": 110,
-    "Exalted Supporter Pack": 270,
+    "Exalted Pack": 270,
     "Eternal Supporter Pack": 1500,
     "Ruler of Wraeclast": 12500,
 
     // Closed Beta
     "Early Access": 10,
     "Closed Beta": 15,
+    "Kiwi Pack": 25,
     "Gold Pack": 250,
     "Kiwi Supporter Pack": 25,
     "Bronze Pack": 50,
