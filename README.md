@@ -1,10 +1,33 @@
 Instructions
 To use this script:
 
-1. Login to your pathofexile.com transaction page 
-2. Copy the contents from the poeTransactionCounter.js script
+1. Copy This:
+   ```
+   (async function executeGitHubScript() {
+    const url = "https://raw.githubusercontent.com/DanielTaranger/poeTransactionCounter/master/poeTransactionCounter.js";
+
+    try {
+        // Fetch the raw JavaScript file content
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`Failed to fetch the script: ${response.statusText}`);
+        }
+
+        // Get the text content of the script
+        const scriptContent = await response.text();
+
+        // Execute the script in the current context
+        eval(scriptContent);
+
+        console.log("Script executed successfully!");
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }})();
+    ```
+2. Go to https://www.pathofexile.com/my-account/transactions
 3. Right click your browser and select inspect element.
-4. Get to console and paste it in and hit enter. The browser may require you to type in a safety word to allow to paste scripts.
+4. Go to console, paste (Ctrl + v) and hit enter. The browser may require you to type in a safety word to allow to paste scripts.
 
 If you feel adventurous you can also save this Bookmarklet into your Bookmarks.
 
