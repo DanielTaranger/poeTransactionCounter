@@ -369,5 +369,5 @@ if (errormessage == "") {
     alert(`You have spent \$${total} on microtransactions`);
 } else {
     console.warn( "The following supporter packs are unaccounted for...", errormessage );
-    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: " + errormessage);
+    alert("You have spent " + "$ USD" + total + " on microtransactions \n\n" + "Packs not found: " + errormessage);
 }
