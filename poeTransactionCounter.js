@@ -321,6 +321,7 @@ const microtransactions = {
     "Silver Supporter Pack": 100,
     "Gold Supporter Pack": 250,
     "Diamond Supporter Pack": 1000,
+    "Diamond Pack": 1000,
 
     // Straight Points
     "50 Point": 5,
