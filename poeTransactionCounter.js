@@ -371,7 +371,7 @@ const microtransactions = {
     "Comic Issue 1": 4,
     "Comic Issue 2": 4,
     "Comic Issue 3": 4,
-    "Comic Issue 3": 4,
+    "Comic Issue 4": 4,
     // 2014 charity event item
     // https://www.pathofexile.com/forum/view-thread/919315
     "Angelic Mask": 5,
@@ -398,21 +398,21 @@ for (let element of elements) {
 
     let out = 0;
     let levenshtein_match = "";
-    let best_levenshtein_score = Infinity;
+    let best_levenshtein_distance = Infinity;
     for (let mtx in microtransactions) {
         for (let suffix of pack_suffixes) {
-            var current_levenshtein_score = levenshtein(transactionName, mtx + suffix)
+            var current_levenshtein_distance = levenshtein(transactionName, mtx + suffix)
             // lower levenshtein distance is better
-            if (current_levenshtein_score < best_levenshtein_score) {
+            if (current_levenshtein_distance < best_levenshtein_distance) {
                 out = microtransactions[mtx];
-                best_levenshtein_score = current_levenshtein_score;
+                best_levenshtein_distance = current_levenshtein_distance;
                 levenshtein_match = mtx + suffix;
             }
         }
     }
 
     // the mtx names must be identical, otherwise display an error
-    if (best_levenshtein_score >= 1) {
+    if (best_levenshtein_distance >= 1) {
         errormessage += "\n" + transactionName;
         out = 0;
     }
