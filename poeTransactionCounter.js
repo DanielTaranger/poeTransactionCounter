@@ -433,13 +433,13 @@ for (let element of elements) {
     let before = total;
     total += out;
 
-    console.log(`${transactionName} (\$${out}) matched with "${levenshtein_match}"`);
+    console.log(`${transactionName} (USD ${out}) matched "${levenshtein_match}"`);
     console.log(`${before} + ${out} = ${total}`);
 }
 
 if (errormessage == "") {
-    alert(`You have spent \$${total} on microtransactions`);
+    alert(`You have spent USD ${total} on microtransactions`);
 } else {
-    console.warn( "The following supporter packs are unaccounted for...", errormessage );
-    alert("You have spent " + "$" + total + " on microtransactions \n\n" + "Packs not found: " + errormessage);
+    console.warn("The following supporter packs are unaccounted for...", errormessage);
+    alert(`You have spent USD ${total} on microtransactions \n\nPacks not found: ${errormessage}`);
 }
