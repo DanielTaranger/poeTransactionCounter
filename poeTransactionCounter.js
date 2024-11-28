@@ -1,3 +1,5 @@
+// stolen from stackoverflow
+// https://stackoverflow.com/q/18516942
 var levenshtein = (function() {
     var row2 = [];
     return function(s1, s2) {
@@ -394,6 +396,15 @@ const microtransactions = {
 
 let total = 0;
 let errormessage = "";
+// the levenshtein distance finds incorrect matches if too many
+// letters are missing (if the pack suffix is missing or incorrect)
+// that is why we try suffixes in general
+// we try different suffixes because the suffix is not predictable
+let pack_suffixes = [
+    " Pack",
+    " Supporter Pack",
+    ""
+]
 
 for (let element of elements) {
     transactionName = element.innerHTML.trim();
@@ -402,20 +413,21 @@ for (let element of elements) {
     let levenshtein_match = "";
     let best_levenshtein_score = Infinity;
     for (let mtx in microtransactions) {
-        var current_levenshtein_score = levenshtein(transactionName, mtx)
-        if (current_levenshtein_score == best_levenshtein_score) {
-            console.log(`tied ${mtx} with score ${best_levenshtein_score}`)
-        }
+        for (let suffix of pack_suffixes) {
+            var current_levenshtein_score = levenshtein(transactionName, mtx + suffix)
         // lower levenshtein distance is better
         if (current_levenshtein_score < best_levenshtein_score) {
             out = microtransactions[mtx];
             best_levenshtein_score = current_levenshtein_score;
-            levenshtein_match = mtx;
+                levenshtein_match = mtx + suffix;
+            }
         }
     }
 
-    if (out === 0) {
+    // the mtx names must be identical, otherwise display an error
+    if (best_levenshtein_score >= 1) {
         errormessage += "\n" + transactionName;
+        out = 0;
     }
 
     let before = total;
