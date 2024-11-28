@@ -316,49 +316,33 @@ const microtransactions = {
     "Highgate": 1100,
 
     // Forsaken Masters
-    "Apprentice Pack": 50,
-    "Apprentice Supporter Pack": 50,
-    "Journeyman Pack": 100,
-    "Journeyman Supporter Pack": 100,
-    "Master Pack": 200,
-    "Master Supporter Pack": 200,
-    "Grandmaster Pack": 500,
-    "Grandmaster Supporter Pack": 500,
+    "Apprentice": 50,
+    "Journeyman": 100,
+    "Master": 200,
+    "Grandmaster": 500,
 
     // Release
-    "Survivor Supporter Pack": 50,
-    "Survivor Pack": 50,
-    "Warrior Pack": 120,
-    "Warrior Supporter Pack": 120,
-    "Champion Pack": 280,
-    "Champion Supporter Pack": 280,
-    "Conqueror Pack": 900,
-    "Conqueror Supporter Pack": 900,
+    "Survivor": 50,
+    "Warrior": 120,
+    "Champion": 280,
+    "Conqueror": 900,
 
     // Open Beta
     "Open Beta": 30,
-    "Regal Pack": 50,
-    "Regal Supporter Pack": 50,
-    "Divine Pack": 110,
-    "Divine Supporter Pack": 110,
-    "Exalted Pack": 270,
-    "Exalted Supporter Pack": 270,
-    "Eternal Pack": 1500,
-    "Eternal Supporter Pack": 1500,
+    "Regal": 50,
+    "Divine": 110,
+    "Exalted": 270,
+    "Eternal": 1500,
     "Ruler of Wraeclast": 12500,
 
     // Closed Beta
     "Early Access": 10,
     "Closed Beta": 15,
-    "Kiwi Pack": 25,
-    "Bronze Pack": 50,
-    "Bronze Supporter Pack": 50,
-    "Silver Pack": 100,
-    "Silver Supporter Pack": 100,
-    "Gold Pack": 250,
-    "Gold Supporter Pack": 250,
-    "Diamond Pack": 1000,
-    "Diamond Supporter Pack": 1000,
+    "Kiwi": 25,
+    "Bronze": 50,
+    "Silver": 100,
+    "Gold": 250,
+    "Diamond": 1000,
 
     // Straight Points
     "50 Point": 5,
@@ -368,14 +352,21 @@ const microtransactions = {
     "1065 Point": 100,
 
     // Vault Passes
-    "Vault Pass": 30,
+    // Season 1 & 2 Passes were sold with the same name
+    "Kirac's Vault Pass": 30,
+    "Kirac's Vault Pass (Kalandra)": 30,
+    "Kirac's Vault Pass (Sanctum)": 30,
+    // Season 5 and onwards are purchased using points
 
     // other MTX
     //
     // digital comic: Origins
-    // might be unreliable due to different price tiers
+    // unreliable due to different price tiers
     // https://www.pathofexile.com/forum/view-thread/1703254
-    "Comic": 4,
+    "Comic Issue 1": 4,
+    "Comic Issue 2": 4,
+    "Comic Issue 3": 4,
+    "Comic Issue 3": 4,
     // 2014 charity event item
     // https://www.pathofexile.com/forum/view-thread/919315
     "Angelic Mask": 5,
@@ -385,7 +376,7 @@ const microtransactions = {
     "Brazil": 40,
     // 2021 Endless Delve / Nexus
     // https://www.pathofexile.com/forum/view-thread/3218435
-    "Cursed Supporter Pack": 60,
+    "Cursed": 60,
 }
 
 let total = 0;
@@ -409,10 +400,10 @@ for (let element of elements) {
     for (let mtx in microtransactions) {
         for (let suffix of pack_suffixes) {
             var current_levenshtein_score = levenshtein(transactionName, mtx + suffix)
-        // lower levenshtein distance is better
-        if (current_levenshtein_score < best_levenshtein_score) {
-            out = microtransactions[mtx];
-            best_levenshtein_score = current_levenshtein_score;
+            // lower levenshtein distance is better
+            if (current_levenshtein_score < best_levenshtein_score) {
+                out = microtransactions[mtx];
+                best_levenshtein_score = current_levenshtein_score;
                 levenshtein_match = mtx + suffix;
             }
         }
