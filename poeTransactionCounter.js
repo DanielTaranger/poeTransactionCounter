@@ -45,30 +45,11 @@ const microtransactions = {
     "Paladin": 30,
     "Divine Paladin": 60,
     "Sacred Paladin": 90,
-    // the first packs with apostrophes
     "Penance": 30,
     "Acolyte's Penance": 60,
     "Acolytes Penance": 60,
     "Zealot's Penance": 90,
     "Zealots Penance": 90,
-
-    // Exilecon 2023
-    "Exilecon 2023 Ultra VIP": 2000,
-    "Exilecon 2023 VIP": 700,
-    "Exilecon 2023": 230,
-    // will never acually match
-    // because "Exilecon 2023" is more expensive
-    // TODO: implement Levenshtein distance?
-    "Exilecon 2023 Balcony Ticket": 210,
-
-    // Exilecon 2019
-    "Exilecon Ultra VIP": 1000,
-    "Exilecon VIP": 500,
-    "Exilecon": 200,
-    // will never acually match
-    // because "Exilecon" is more expensive
-    // TODO: implement Levenshtein distance?
-    "Exilecon Balcony Ticket": 180,
 
     // Necropolis
     "Solar": 30,
@@ -92,6 +73,12 @@ const microtransactions = {
     "Disciple": 30,
     "Ardent Disciple": 60,
     "Devoted Disciple": 90,
+
+    // Exilecon 2023
+    "Exilecon 2023 Ultra VIP": 2000,
+    "Exilecon 2023 VIP": 700,
+    "Exilecon 2023": 230,
+    "Exilecon 2023 Balcony Ticket": 210,
 
     // Crucible
     "Lithomancer": 30,
@@ -158,7 +145,8 @@ const microtransactions = {
     // Expedition
     "Soulkeeper": 30,
     "Soulkeeper Vizier": 60,
-    // ggg has misspelled this in the account transactions list
+    // intentionally misspelled because ggg has
+    // misspelled this in the account transactions list
     "Soulkeepr Vizier": 60,
     "Soulkeeper Demigod": 90,
     "Aesir": 30,
@@ -214,6 +202,12 @@ const microtransactions = {
     "Grand Sanctum": 60,
     "Damnation": 30,
     "Eternal Damnation": 60,
+
+    // Exilecon 2019
+    "Exilecon Ultra VIP": 1000,
+    "Exilecon VIP": 500,
+    "Exilecon": 200,
+    "Exilecon Balcony Ticket": 180,
 
     // Blight
     "Sentinel": 30,
