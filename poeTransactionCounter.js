@@ -32,8 +32,8 @@ const microtransactions = {
     "Divine Paladin": 60,
     "Sacred Paladin": 90,
     "Penance": 30,
-    "Acolytes Penance": 60,
-    "Zealots Penance": 90,
+    "Acolyte's Penance": 60,
+    "Zealot's Penance": 90,
 
     //Necropolis
     "Solar": 30,
