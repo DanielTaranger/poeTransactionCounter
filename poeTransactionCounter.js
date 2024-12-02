@@ -1,5 +1,37 @@
-const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
+// stolen from stackoverflow
+// https://stackoverflow.com/q/18516942
+var levenshtein = (function() {
+    var row2 = [];
+    return function(s1, s2) {
+        if (s1 === s2) {
+            return 0;
+        } else {
+            var s1_len = s1.length, s2_len = s2.length;
+            if (s1_len && s2_len) {
+                var i1 = 0, i2 = 0, a, b, c, c2, row = row2;
+                while (i1 < s1_len)
+                    row[i1] = ++i1;
+                while (i2 < s2_len) {
+                    c2 = s2.charCodeAt(i2);
+                    a = i2;
+                    ++i2;
+                    b = i2;
+                    for (i1 = 0; i1 < s1_len; ++i1) {
+                        c = a + (s1.charCodeAt(i1) === c2 ? 0 : 1);
+                        a = row[i1];
+                        b = b < a ? (b < c ? b + 1 : c) : (a < c ? a + 1 : c);
+                        row[i1] = b;
+                    }
+                }
+                return b;
+            } else {
+                return s1_len + s2_len;
+            }
+        }
+    };
+})();
 
+const elements = document.querySelectorAll(".packageName", ".el", ".FontinBold");
 const microtransactions = {
     // PoE2 Early Access
     "Path of Exile 2 Early Access": 30,
@@ -9,33 +41,17 @@ const microtransactions = {
     "Warlord of the Karui": 240,
     "Liberator of Wraeclast": 480,
 
-    // Exilecon 2023
-    "Exilecon 2023 Ultra VIP": 2000,
-    "Exilecon 2023 VIP": 700,
-    "Exilecon 2023": 230,
-    // will never acually match
-    // because "Exilecon 2023" is more expensive
-    // TODO: implement Levenshtein distance?
-    "Exilecon 2023 Balcony Ticket": 210,
-
-    // Exilecon 2019
-    "Exilecon Ultra VIP": 1000,
-    "Exilecon VIP": 500,
-    "Exilecon": 200,
-    // will never acually match
-    // because "Exilecon" is more expensive
-    // TODO: implement Levenshtein distance?
-    "Exilecon Balcony Ticket": 180,
-
-    //Settlers of Kalguur
+    // Settlers of Kalguur
     "Paladin": 30,
     "Divine Paladin": 60,
     "Sacred Paladin": 90,
     "Penance": 30,
     "Acolyte's Penance": 60,
+    "Acolytes Penance": 60,
     "Zealot's Penance": 90,
+    "Zealots Penance": 90,
 
-    //Necropolis
+    // Necropolis
     "Solar": 30,
     "Solar Knight": 60,
     "Solar Guardian": 90,
@@ -50,13 +66,19 @@ const microtransactions = {
     "Karui Elemancer": 240,
     "Sandwraith Assassin": 480,
 
-    // Ancestors
+    // Trial of the Ancestors
     "Shade": 30,
     "Haunting Shade": 60,
     "Midnight Shade": 90,
     "Disciple": 30,
     "Ardent Disciple": 60,
     "Devoted Disciple": 90,
+
+    // Exilecon 2023
+    "Exilecon 2023 Ultra VIP": 2000,
+    "Exilecon 2023 VIP": 700,
+    "Exilecon 2023": 230,
+    "Exilecon 2023 Balcony Ticket": 210,
 
     // Crucible
     "Lithomancer": 30,
@@ -123,7 +145,8 @@ const microtransactions = {
     // Expedition
     "Soulkeeper": 30,
     "Soulkeeper Vizier": 60,
-    // ggg has misspelled this in the account transactions list
+    // intentionally misspelled because ggg has
+    // misspelled this in the account transactions list
     "Soulkeepr Vizier": 60,
     "Soulkeeper Demigod": 90,
     "Aesir": 30,
@@ -136,8 +159,9 @@ const microtransactions = {
     "Crescent": 30,
     "Silver Crescent": 60,
 
-    // 2021 Endless Delve / Nexus -- https://www.pathofexile.com/forum/view-thread/3218435
-    "Cursed Supporter Pack": 60,
+    // 2021 Endless Delve / Nexus
+    // https://www.pathofexile.com/forum/view-thread/3218435
+    "Cursed": 60,
 
     // Ritual
     "Renegade": 30,
@@ -182,6 +206,12 @@ const microtransactions = {
     "Grand Sanctum": 60,
     "Damnation": 30,
     "Eternal Damnation": 60,
+
+    // Exilecon 2019
+    "Exilecon Ultra VIP": 1000,
+    "Exilecon VIP": 500,
+    "Exilecon": 200,
+    "Exilecon Balcony Ticket": 180,
 
     // Blight
     "Sentinel": 30,
@@ -290,38 +320,34 @@ const microtransactions = {
     "Highgate": 1100,
 
     // Forsaken Masters
-    "Apprentice Supporter Pack": 50,
-    "Journeyman Supporter Pack": 100,
-    "Master Supporter Pack": 200,
-    "Grandmaster Supporter Pack": 500,
+    "Apprentice": 50,
+    "Journeyman": 100,
+    "Master": 200,
+    "Grandmaster": 500,
 
     // Release
-    "Survivor Supporter Pack": 50,
-    "Warrior Pack": 120,
-    "Champion Pack": 280,
-    "Conqueror Supporter Pack": 900,
+    "Survivor": 50,
+    "Warrior": 120,
+    "Champion": 280,
+    "Conqueror": 900,
 
     // Open Beta
     "Open Beta": 30,
-    "Regal Supporter Pack": 50,
-    "Regal Pack": 50,
-    "Divine Supporter Pack": 110,
-    "Divine Pack": 110,
-    "Exalted Pack": 270,
-    "Eternal Supporter Pack": 1500,
+    "Regal": 50,
+    "Divine": 110,
+    "Exalted": 270,
+    "Eternal": 1500,
     "Ruler of Wraeclast": 12500,
 
     // Closed Beta
     "Early Access": 10,
     "Closed Beta": 15,
-    "Kiwi Pack": 25,
-    "Gold Pack": 250,
-    "Kiwi Supporter Pack": 25,
-    "Bronze Pack": 50,
-    "Silver Supporter Pack": 100,
-    "Gold Supporter Pack": 250,
-    "Diamond Supporter Pack": 1000,
-    "Diamond Pack": 1000,
+    "Supporter Pack": 15,
+    "Kiwi": 25,
+    "Bronze": 50,
+    "Silver": 100,
+    "Gold": 250,
+    "Diamond": 1000,
 
     // Straight Points
     "50 Point": 5,
@@ -331,44 +357,76 @@ const microtransactions = {
     "1065 Point": 100,
 
     // Vault Passes
-    "Vault Pass": 30,
+    // Season 1 & 2 Passes were sold with the same name
+    "Kirac's Vault Pass": 30,
+    "Kirac's Vault Pass (Kalandra)": 30,
+    "Kirac's Vault Pass (Sanctum)": 30,
+    // Season 5 and onwards are purchased using points
 
-    // Questionmark
-    "Comic": 4,
+    // other MTX
+    //
+    // digital comic: Origins
+    // unreliable due to different price tiers
+    // https://www.pathofexile.com/forum/view-thread/1703254
+    "Comic Issue 1": 4,
+    "Comic Issue 2": 4,
+    "Comic Issue 3": 4,
+    "Comic Issue 4": 4,
+    // 2014 charity event item
+    // https://www.pathofexile.com/forum/view-thread/919315
     "Angelic Mask": 5,
+    // 2015 Australia Day event item
+    // https://www.pathofexile.com/forum/view-thread/1185814
     "Koala": 14,
     "Brazil": 40,
 }
 
 let total = 0;
 let errormessage = "";
+// the levenshtein distance finds incorrect matches if too many
+// letters are missing (if the pack suffix is missing or incorrect)
+// that is why we try suffixes in general
+// we try different suffixes because the suffix is not predictable
+let pack_suffixes = [
+    " Pack",
+    " Supporter Pack",
+    ""
+]
 
 for (let element of elements) {
     transactionName = element.innerHTML.trim();
 
     let out = 0;
-
+    let levenshtein_match = "";
+    let best_levenshtein_distance = Infinity;
     for (let mtx in microtransactions) {
-        let value = microtransactions[mtx];
-        if (transactionName.includes(mtx) && value > out) {
-            out = value;
+        for (let suffix of pack_suffixes) {
+            var current_levenshtein_distance = levenshtein(transactionName, mtx + suffix)
+            // lower levenshtein distance is better
+            if (current_levenshtein_distance < best_levenshtein_distance) {
+                out = microtransactions[mtx];
+                best_levenshtein_distance = current_levenshtein_distance;
+                levenshtein_match = mtx + suffix;
+            }
         }
     }
 
-    if (out === 0) {
+    // the mtx names must be identical, otherwise display an error
+    if (best_levenshtein_distance >= 1) {
         errormessage += "\n" + transactionName;
+        out = 0;
     }
 
     let before = total;
     total += out;
 
-    console.log(`${transactionName} (\$${out})`);
+    console.log(`${transactionName} (USD ${out}) matched "${levenshtein_match}"`);
     console.log(`${before} + ${out} = ${total}`);
 }
 
 if (errormessage == "") {
-    alert(`You have spent \$${total} on microtransactions`);
+    alert(`You have spent USD ${total} on microtransactions`);
 } else {
-    console.warn( "The following supporter packs are unaccounted for...", errormessage );
-    alert("You have spent " + "$ USD" + total + " on microtransactions \n\n" + "Packs not found: " + errormessage);
+    console.warn("The following supporter packs are unaccounted for...", errormessage);
+    alert(`You have spent USD ${total} on microtransactions \n\nPacks not found: ${errormessage}`);
 }
