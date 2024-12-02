@@ -39,3 +39,5 @@ This bookmarklet uses the statically CDN to fetch the current version of the js 
 
 Respective reddit thread:
 https://www.reddit.com/r/pathofexile/comments/6fjm8w/toola_script_i_made_that_shows_how_much_you_spent/?sort=new
+
+Kudos to https://github.com/peeteer1245 for the support for this. 
