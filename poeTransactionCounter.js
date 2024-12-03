@@ -100,7 +100,7 @@ const microtransactions = {
     "Forgeguard": 60,
     "Forgemaster": 90,
     "Gemling": 30,
-    "Gemling Artificer": 60,
+    "Gemling Artificier": 60,
     "Gemling Sage": 90,
 
     // Lake of Kalandra
